@@ -1,34 +1,34 @@
 alert ("Happy birthday 🎂🍰Ameer Abbas")
 
 
-var deadline = new Date("November 01, 2021 00:00:00").getTime(); 
+const deadline = new Date("November 01, 2022 10:00:00").getTime(); 
 
   
-var x = setInterval(function() { 
+const x = setInterval(function() { 
 
   
-var now = new Date().getTime(); 
-var t = deadline - now; 
-var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
-var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
-var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
-var seconds = Math.floor((t % (1000 * 60)) / 1000); 
-document.getElementById("day").innerHTML =days ; 
-document.getElementById("hour").innerHTML =hours; 
-document.getElementById("minute").innerHTML = minutes;  
-document.getElementById("second").innerHTML =seconds;  
+const now = new Date().getTime(); 
+const t = deadline - now; 
+const days = Math.floor(t / (1000 * 60 * 60 * 24)); 
+const hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+const minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
+const seconds = Math.floor((t % (1000 * 60)) / 1000); 
+document.querySelector("#day").innerHTML =days ; 
+document.querySelector("#hour").innerHTML =hours; 
+document.querySelector("#minute").innerHTML = minutes;  
+document.querySelector("#second").innerHTML =seconds;  
 
 if (t < 0) { 
 
         clearInterval(x); 
 
-        document.getElementById("demo").innerHTML = "Happy Birthday🍰🍧 Ameer Abbas"; 
+        document.querySelector("#demo").innerHTML = "Happy Birthday🍰🍧 Ameer Abbas"; 
 
-        document.getElementById("day").innerHTML ='0'; 
+        document.querySelector("#day").innerHTML ='0'; 
 
-        document.getElementById("hour").innerHTML ='0'; 
+        document.querySelector("#hour").innerHTML ='0'; 
 
-        document.getElementById("minute").innerHTML ='0' ;  
+        document.querySelector("#minute").innerHTML ='0' ;  
 
-        document.getElementById("second").innerHTML = '0'; } 
+        document.querySelector("#second").innerHTML = '0'; } 
 }, 1000); 
